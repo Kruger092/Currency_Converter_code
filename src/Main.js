@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import './App.css';
 import CurrencyRow from './CurrencyRow'
 
-const BASE_URL = 'http://api.exchangeratesapi.io/v1/latest?access_key=5f3ecaaee9876611868c238684070534&symbols=EUR,USD,UAH,RUB'
+const BASE_URL = 'http://api.exchangeratesapi.io/v1/latest?access_key=5f3ecaaee9876611868c238684070534&symbols=EUR,USD,UAH,RUB,JPY,CAD'
 
-// Бесплатная версия API работает только с EUR. Иначе можно было бы менять валюту в зависимости от языка браузера правильно.
+/**Бесплатная версия API работает только с EUR. Иначе можно было бы менять валюту в зависимости от языка браузера правильно.
+Легко также добавлять дополнительную валюту прописав в URL нужную.**/
+
 const getCurrencyByLanguage = () => {
   let currency = ''
 
